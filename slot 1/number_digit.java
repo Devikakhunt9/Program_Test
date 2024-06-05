@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -10,13 +11,20 @@ public class number_digit {
         System.out.println("Enter number :");
         int n = sc.nextInt();
        
-        char[] numberArray = new char[1000];
-        for(int i = 1;i<200;i++){
-            numberArray[i] = (char)i;
+        ArrayList<String> numbers = new ArrayList<String>();
+        for (int i = 1; i <=100; i++) {
+         numbers.add(i+"");   
         }
-        for (char c : numberArray) {
-            System.out.println(c);
+        for (String string : numbers) {
+            System.out.print(string);
         }
+        System.out.println();
+        String result = String.join("",numbers);
+        System.out.println(n+"th digit of the Series :"+result.charAt(n-1));
+        // System.out.println(result);
+        
+
+        
         
     }
 }
